@@ -1,0 +1,130 @@
+export default function LakshitaLoveWebsite() {
+  const compliments = [
+    "Lakshita, you are the kind of beautiful that lingers in the heart long after the moment passes 💗",
+    "Your smile feels like the prettiest part of a love story 🌸",
+    "You make everything softer, sweeter, and more magical just by being there ✨",
+    "Lakshita, your cuteness is unfair and your beauty is unforgettable 💞",
+    "You have that rare kind of charm that makes ordinary days feel romantic 💌",
+    "Being around you must feel like standing inside a thousand pink sunsets 🌷",
+    "Lakshita, I love you soo much. You are truly beautiful. (by Kaushal) 💘",
+  ];
+
+  const hearts = [
+    { left: "8%", delay: "0s", duration: "7s", size: "24px" },
+    { left: "18%", delay: "1.5s", duration: "9s", size: "18px" },
+    { left: "28%", delay: "0.7s", duration: "8s", size: "30px" },
+    { left: "40%", delay: "2.5s", duration: "10s", size: "22px" },
+    { left: "52%", delay: "1.2s", duration: "7.5s", size: "26px" },
+    { left: "64%", delay: "3s", duration: "9.5s", size: "20px" },
+    { left: "76%", delay: "0.4s", duration: "8.5s", size: "28px" },
+    { left: "88%", delay: "2s", duration: "7.8s", size: "24px" },
+  ];
+
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-pink-200 via-rose-100 to-fuchsia-200 font-sans">
+      <style>{`
+        @keyframes floatUp {
+          0% { transform: translateY(110vh) scale(0.8); opacity: 0; }
+          10% { opacity: 0.8; }
+          50% { transform: translateY(45vh) translateX(10px) scale(1); opacity: 0.95; }
+          100% { transform: translateY(-15vh) translateX(-10px) scale(1.1); opacity: 0; }
+        }
+        @keyframes pulseGlow {
+          0%, 100% { box-shadow: 0 0 25px rgba(255, 105, 180, 0.25), 0 0 60px rgba(255, 182, 193, 0.2); }
+          50% { box-shadow: 0 0 45px rgba(255, 105, 180, 0.4), 0 0 90px rgba(255, 182, 193, 0.3); }
+        }
+        @keyframes sway {
+          0%, 100% { transform: rotate(-1deg); }
+          50% { transform: rotate(1deg); }
+        }
+      `}</style>
+
+      <div className="absolute inset-0 pointer-events-none">
+        {hearts.map((heart, index) => (
+          <div
+            key={index}
+            className="absolute select-none"
+            style={{
+              left: heart.left,
+              bottom: "-10%",
+              fontSize: heart.size,
+              animation: `floatUp ${heart.duration} linear infinite`,
+              animationDelay: heart.delay,
+            }}
+          >
+            💖
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.5),transparent_45%)]" />
+        <div className="absolute top-16 left-12 text-5xl opacity-40">💕</div>
+        <div className="absolute top-24 right-20 text-4xl opacity-40">💗</div>
+        <div className="absolute bottom-24 left-20 text-5xl opacity-40">💞</div>
+        <div className="absolute bottom-16 right-16 text-4xl opacity-40">💘</div>
+      </div>
+
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-12">
+        <div className="w-full max-w-3xl">
+          <div className="text-center mb-8">
+            <p className="text-pink-700 text-lg md:text-xl font-medium tracking-wide">
+              A little pink universe for Lakshita 💗
+            </p>
+            <h1 className="mt-2 text-5xl md:text-7xl font-black text-pink-600 drop-shadow-sm">
+              For Lakshita
+            </h1>
+          </div>
+
+          <div
+            className="relative mx-auto max-w-2xl rounded-[2.5rem] border border-pink-100 bg-white/70 backdrop-blur-xl p-4 md:p-6"
+            style={{ animation: "pulseGlow 3s ease-in-out infinite" }}
+          >
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 rounded-full bg-pink-500 px-5 py-2 text-sm md:text-base font-semibold text-white shadow-lg">
+              Sealed with love 💌
+            </div>
+
+            <div
+              className="rounded-[2rem] bg-gradient-to-b from-pink-50 via-rose-50 to-pink-100 p-6 md:p-10 border border-pink-200 shadow-inner"
+              style={{ animation: "sway 5s ease-in-out infinite" }}
+            >
+              <div className="text-center mb-6">
+                <div className="text-5xl mb-3">💖</div>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-pink-600 leading-tight">
+                  Lakshita, you’re soo cute and beautiful
+                </h2>
+              </div>
+
+              <div className="space-y-5 text-pink-900 text-lg md:text-xl leading-relaxed text-center">
+                <p>
+                  There is something about you that feels so soft and lovely, like the kind of beauty that does not just get noticed, it gets remembered.
+                </p>
+                <p>
+                  You have that rare magic where cute and beautiful somehow still feel too small to describe you. You make everything feel warmer, sweeter, and a little more romantic.
+                </p>
+                <p>
+                  If hearts could write poetry on their own, I think they would write your name again and again.
+                </p>
+                <p className="text-2xl md:text-3xl font-bold text-pink-600">
+                  Lakshita, I love you soo much <span className="text-pink-500">(by Kaushal)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {compliments.map((item, index) => (
+              <div
+                key={index}
+                className="rounded-3xl border border-pink-100 bg-white/65 backdrop-blur-md px-5 py-4 text-pink-800 shadow-lg text-base md:text-lg"
+              >
+                {item}
+              </div>
+            ))}
+          </div>
+
+          <footer className="mt-10 text-center text-pink-700 text-lg font-semibold">
+            made with all my love, by Kaushal 💘
+          </footer>
+        </div>
+      </div>
+    </div>
+  );
+}
